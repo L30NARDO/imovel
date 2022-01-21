@@ -1,7 +1,17 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/noderest', {useMongoClient: true});
-mongoose.Promise = global.Promise;
+const uri = "mongodb+srv://root:root@cluster0.y9dps.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+const connectDB = async () =>{
+    awaitmongoose.connect(uri,{
+        useUnifiedTopology: true,
+        useNewUrlParser: true
+    });
+    console.log('Banco de dados conectado')
+}
 
 
-module.exports = mongoose;
+
+module.exports = connectDB;
+
+

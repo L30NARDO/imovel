@@ -1,6 +1,6 @@
-const mongoose = require('../database');
+const mongoose = require('mongoose');
 
-const ImovelSchema = new mongoose.Schema({
+const imovelSchema = new mongoose.Schema({
     nomeProprietario:{
         type: String,
         require: true,
@@ -53,5 +53,5 @@ const ImovelSchema = new mongoose.Schema({
     }
 });
 
-const Imovel = mongoose.model('Imovel', ImovelSchema);
-module.exports = Imovel;
+const imovel = mongoose.model('Imovel', imovelSchema);
+module.exports = imovel;
